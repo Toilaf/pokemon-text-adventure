@@ -29,7 +29,7 @@ public class MainClass {
 		Pokemon squishy = new Pokemon(false,"enemy",0);
 		story.announceSquishy(player, squishy);
 		Battle squishBattle = new Battle(player, squishy, squishy);
-		story.squishBattle(player, squishy, squishBattle, story);
+		story.meetSquishyBattle(player, squishy, squishBattle, story);
 
 		if (squishBattle.getResolution().equals("win")){
 			story.ifDefeatSquishy();

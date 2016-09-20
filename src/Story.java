@@ -103,7 +103,7 @@ public class Story {
 		player.setHP(player.getMaxHP());
 	}
 	
-	public void squishBattle(Pokemon player, Pokemon squishy, Battle squishBattle, Story story){
+	public void meetSquishyBattle(Pokemon player, Pokemon squishy, Battle squishBattle, Story story){
 		squishBattle.setResolution("progressing");
 		while (player.getHP()>0&&squishy.getHP()>0){
 			System.out.println("\nDo you: run away, fight back, defend, or use Struggle?");
@@ -122,7 +122,7 @@ public class Story {
 					squishy.attack(squishy, player, story);
 				} else if (actionOne.contains("defend")&&squishy.getHP()>0){
 					player.defend(player);
-					System.out.println("Squishy's attacks do less damage now!");
+					System.out.println("All Squishy's attacks do less damage now!");
 					squishy.attack(squishy, player, story);
 				} else if ((actionOne.contains("struggle")&&squishy.getHP()>0)){
 					player.struggle(player, squishy, story);
